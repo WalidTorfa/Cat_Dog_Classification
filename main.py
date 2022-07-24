@@ -46,10 +46,10 @@ model.add(Flatten())
 model.add(Dense(32, activation='tanh'))
 model.add(Dense(1, activation='sigmoid'))
 model.compile(loss="binary_crossentropy", optimizer='adam', metrics=['accuracy'])
-model.fit(train_datagenerator, epochs=50)
+model.fit(train_datagenerator, epochs=100)
 predictions = model.predict(x=test_datagenerator)
 
 
 v = np.round(predictions)
 print(classification_report(v,test_datagenerator.classes))
-model.save("CatorDog.h5")
+model.save("CatorDog1.h5")
