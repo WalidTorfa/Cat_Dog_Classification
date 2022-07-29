@@ -23,7 +23,7 @@ def preprocessing(file):
     return(train_data,test_data)
 
 def predictirl(imagename):
-    Model = tf.keras.models.load_model('CatorDog.h5')
+    Model = tf.keras.models.load_model('CatorDog1.h5')
 
     my_image = load_img(imagename, target_size=(150, 150))
 
